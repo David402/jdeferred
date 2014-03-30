@@ -156,7 +156,7 @@ public class AndroidDeferredManager extends DefaultDeferredManager {
 		return new AndroidDeferredObject<D, F, P>(promise).promise();
 	}
 
-    public <D, F, P> Promise<D, F, P> when(Promise<D, F, P> promise, AndroidExecutionScope scope) {
+    public <D, F, P> Promise<D, F, P> when(AndroidExecutionScope scope, Promise<D, F, P> promise) {
         if (promise instanceof AndroidDeferredObject) {
             return promise;
         }
